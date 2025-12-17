@@ -35,8 +35,9 @@ export default function App() {
 
   return (
     <>
-      <div className="app">
-        {/* 🔹 Header */}
+
+
+    {/* 🔹 Header */}
         <header className="header">
           <h1 className="logo-text">
             <span className="text-white" style={{ color: "#5044E4" }}>
@@ -55,6 +56,8 @@ export default function App() {
             <button onClick={() => fetchNews(search || topic)}>Search</button>
           </div>
         </header>
+      <div className="app">
+        
 
         {/* 🔹 Topics */}
         <div className="topics">

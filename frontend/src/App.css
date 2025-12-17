@@ -248,12 +248,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 24px;
-  /* background: #fff; */
+  
+  padding: 14px 54px;
+  background: #F2F5F8;
   color: #ffffff;
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: #3c3bdb solid 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Left logo */
