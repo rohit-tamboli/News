@@ -4,15 +4,20 @@ import "./App.css";
 export default function App() {
   const [news, setNews] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const fetchNews = async (q = "general") => {
-    const res = await fetch(
-      // `https://news-backend.vercel.app/api/news?q=${query}`
-      `https://news-rbrl.vercel.app/api/news?q=${query}`
-    );
-
-    const data = await res.json();
-    setNews(data.articles || []);
+    setLoading(true);
+    try {
+      const res = await fetch(
+        `https://news-rbrl.vercel.app/api/news?q=${q}`
+      );
+      const data = await res.json();
+      setNews(data.articles || []);
+    } catch (err) {
+      console.error(err);
+    }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -29,16 +34,23 @@ export default function App() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button onClick={() => fetchNews(search)}>Search</button>
+        <button onClick={() => fetchNews(search || "general")}>
+          Search
+        </button>
       </div>
+
+      {loading && <p>Loading...</p>}
 
       <div className="news-list">
         {news.map((item, i) => (
           <div key={i} className="card">
-            <img src={item.urlToImage} alt="" />
+            <img
+              src={item.urlToImage || "https://via.placeholder.com/300"}
+              alt="news"
+            />
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <a href={item.url} target="_blank">
+            <a href={item.url} target="_blank" rel="noreferrer">
               Read More
             </a>
           </div>
