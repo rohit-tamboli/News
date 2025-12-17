@@ -15,7 +15,7 @@ body {
 .app {
   max-width: 1200px;
   margin: auto;
-  padding: 24px 16px 60px;
+  padding: 24px 16px 20px;
 }
 
 /* Header */
@@ -292,7 +292,7 @@ p {
   text-transform: uppercase;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .text-highlight {
@@ -343,4 +343,37 @@ p {
 .header-right button:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(50, 37, 235, 0.45);
+}
+
+/* ---------- */
+
+
+/* ===== MOBILE DESIGN ===== */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px 16px;
+    position: static ;
+  }
+
+  .logo-text {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .header-right {
+    width: 100%;
+  }
+
+  .header-right input {
+    width: 100%;
+    flex: 1;
+  }
+
+  .header-right button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
 }

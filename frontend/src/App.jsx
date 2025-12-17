@@ -35,30 +35,27 @@ export default function App() {
 
   return (
     <>
+      {/* 🔹 Header */}
+      <header className="header">
+        <h1 className="logo-text">
+          <span className="text-white" style={{ color: "#5044E4" }}>
+            Quick
+          </span>
+          News
+        </h1>
 
+        <div className="header-right">
+          <input
+            type="text"
+            placeholder="Search news"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button onClick={() => fetchNews(search || topic)}>Search</button>
+        </div>
+      </header>
 
-    {/* 🔹 Header */}
-        <header className="header">
-          <h1 className="logo-text">
-            <span className="text-white" style={{ color: "#5044E4" }}>
-              Quick
-            </span>
-            News
-          </h1>
-
-          <div className="header-right">
-            <input
-              type="text"
-              placeholder="Search news"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button onClick={() => fetchNews(search || topic)}>Search</button>
-          </div>
-        </header>
       <div className="app">
-        
-
         {/* 🔹 Topics */}
         <div className="topics">
           {topics.map((t) => (
