@@ -1,0 +1,70 @@
+/* Footer Styles */
+.footer {
+  background-color: #f1f1f1;
+  padding-top: 10px;
+  text-align: center;
+  margin-top: 30px;
+ 
+}
+
+/* Footer Content */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Links */
+.footer-links {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition on hover */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker blue on hover for contrast */
+}
+
+/* Footer Paragraph */
+.footer p {
+  padding: 2px 0;
+  color: #fff; /* Lighter text color for readability */
+}
+
+/* Copyright Section */
+.copyright {
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+  padding: 10px 0; /* Padding for spacing */
+}
+
+/* Mobile Responsiveness */
+@media screen and (min-device-width: 300px) and (max-width: 470px)  {
+  .footer {
+    padding-top: 20px; /* Increased padding for mobile */
+    padding-bottom: 0px; /* Extra space at the bottom */
+  }
+
+  .footer-links {
+    margin-top: 2px;
+    text-align: center; /* Center align links on mobile */
+  }
+
+  .footer-links a {
+    margin: 0 10px; /* Reduced spacing between links */
+    font-size: 16px; /* Slightly larger font for better readability on mobile */
+  }
+
+  .copyright {
+    font-size: 14px; /* Smaller font size for copyright on mobile */
+    padding: 15px 0; /* Extra padding for clarity */
+  }
+}
