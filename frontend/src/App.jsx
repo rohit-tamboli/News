@@ -7,7 +7,9 @@ export default function App() {
 
   const fetchNews = async (q = "general") => {
     const res = await fetch(
-      `https://news-backend.vercel.app/api/news?q=${query}`
+      // `https://news-backend.vercel.app/api/news?q=${query}`
+      `https://news-server-rouge.vercel.app/api/news?q=${query}`
+      
     );
 
     const data = await res.json();
